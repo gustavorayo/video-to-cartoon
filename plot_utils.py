@@ -23,3 +23,15 @@ def plot_images(n_row, n_col, imgs, figsize=(24, 16), show_names=False):
         ax.axis('off')
     plt.tight_layout(pad=0.05)
     plt.show()
+
+
+def plot_scores(scores, z, title=""):
+    for s, l in zip(scores, z):
+        plt.plot(s, label=l)
+    plt.xlabel("X-axis")
+    plt.ylabel("Y-axis")
+    plt.ylim(0.90, 1)
+    plt.title(title)
+    plt.xticks([i for i, x in enumerate(scores[0]) if i % 10 == 0])
+    plt.legend()
+    plt.show()
