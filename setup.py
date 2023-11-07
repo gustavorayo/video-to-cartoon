@@ -6,7 +6,7 @@ directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-setup(name='art-fid',
+setup(name='video-to-cartoon',
       version='0.0.1',
       author='Gustavo Rayo',
       packages=find_packages(),
