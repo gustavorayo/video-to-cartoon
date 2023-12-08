@@ -3,7 +3,7 @@ from PIL import Image
 
 from controlnet_aux import CannyDetector, HEDdetector, SamDetector
 from utils import timing_decorator, Grid
-from clip_interrogator import ClipInterrogator
+from interrogator import ClipInterrogator
 from image_converter import ImageConverter
 
 class KeyFramesGenerator:
