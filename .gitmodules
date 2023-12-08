@@ -1,0 +1,3 @@
+[submodule "deps/Rerender_A_Video"]
+	path = deps/Rerender_A_Video
+	url = https://github.com/williamyang1991/Rerender_A_Video

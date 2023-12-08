@@ -1,6 +1,8 @@
 import time
 import os
 import cv2
+from PIL import Image
+import numpy as np
 
 
 def timing_decorator(func):
@@ -75,3 +77,50 @@ class VideoParser:
                 break
 
         cap.release()
+
+
+class Grid:
+    def __init__(self, grid_size):
+        self.grid_size = grid_size
+
+    def get_image(self, image):
+        return Image.open(image) if isinstance(image, str) else image
+
+    def merge_images(self, images):
+        rows, cols = self.grid_size
+        first_image = self.get_image(images[0])
+        img_width, img_height = first_image.size
+
+        # Create an empty canvas for the grid
+        grid = np.zeros((img_height * rows, img_width * cols, 3), dtype=np.uint8)
+
+        # Loop through the images and place them in the grid
+        for i in range(rows):
+            for j in range(cols):
+                index = i * cols + j
+                if index < len(images):
+                    img = np.array(self.get_image(images[index]))
+                    grid[i * img_height:(i + 1) * img_height, j * img_width:(j + 1) * img_width, :] = img
+
+        return Image.fromarray(grid)
+
+    def split_images(self, img):
+        rows, cols = self.grid_size
+        # Get the height and width of each individual image
+        img_width, img_height = img.size
+        img_width = int(img_width / cols)
+        img_height = int(img_height / rows)
+        combined_image = np.array(img)
+        individual_images = []
+
+        # Split the combined image into individual images
+        for i in range(rows):
+            for j in range(cols):
+                start_x = j * img_width
+                end_x = (j + 1) * img_width
+                start_y = i * img_height
+                end_y = (i + 1) * img_height
+
+                individual_image = combined_image[start_y:end_y, start_x:end_x, :]
+                individual_images.append(individual_image)
+        return individual_images
