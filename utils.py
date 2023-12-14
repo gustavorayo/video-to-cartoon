@@ -59,10 +59,6 @@ class VideoParser:
         cap = cv2.VideoCapture(self.video_path)
         frame_count = 0
 
-        ret, frame = cap.read()
-        if not ret:
-            print("Error reading frame.")
-
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
