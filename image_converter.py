@@ -37,6 +37,7 @@ class ImageConverter:
                                                                         torch_dtype=torch.float16,
                                                                         low_cpu_mem_usage=self.low_cpu_mem_usage)
     self.generator = torch.Generator(device="cpu").manual_seed(self.seed)
+    self.pipeline = self.pipeline.to("cuda")
     self.pipeline.enable_model_cpu_offload()
 
   # def set_detector(self, controlnet):
