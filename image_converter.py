@@ -7,8 +7,9 @@ from utils import  timing_decorator
 class ImageConverter:
 
   @timing_decorator
-  def __init__(self, seed=1234):
+  def __init__(self, seed=1234, low_cpu_mem_usage=False):
     self.seed = seed
+    self.low_cpu_mem_usage = low_cpu_mem_usage
 
   @timing_decorator
   def load(self, pipeline_type, model_id, scheduler_name ="Euler a", controlnets=None):
@@ -22,15 +23,19 @@ class ImageConverter:
 
     if pipeline_type == "img2img":
       self.pipeline = StableDiffusionImg2ImgPipeline.from_pretrained(model_id,
-                                                                     scheduler=scheduler, safety_checker=None, torch_dtype=torch.float16, low_cpu_mem_usage=False)
+                                                                     scheduler=scheduler, safety_checker=None,
+                                                                     torch_dtype=torch.float16,
+                                                                     low_cpu_mem_usage=self.low_cpu_mem_usage)
     elif pipeline_type == "Controlnet_img2img":
       self.pipeline = StableDiffusionControlNetImg2ImgPipeline.from_pretrained(model_id, scheduler=scheduler,
                                                                                safety_checker=None,
-                                                                               controlnet=controls, torch_dtype=torch.float16)
+                                                                               controlnet=controls, torch_dtype=torch.float16,
+                                                                               low_cpu_mem_usage=self.low_cpu_mem_usage)
     elif pipeline_type == "Controlnet_text2img":
       self.pipeline = StableDiffusionControlNetPipeline.from_pretrained(model_id, controlnet=controls,
                                                                         safety_checker=None,
-                                                                        torch_dtype=torch.float16)
+                                                                        torch_dtype=torch.float16,
+                                                                        low_cpu_mem_usage=self.low_cpu_mem_usage)
     self.generator = torch.Generator(device="cpu").manual_seed(self.seed)
     self.pipeline.enable_model_cpu_offload()
 
