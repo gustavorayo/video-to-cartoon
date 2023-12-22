@@ -85,23 +85,19 @@ class StylePropagator:
 
   @timing_decorator
   def advanced_propagation(self,ebsynth_folder, output_name, ebsynth_temp, end=120, interval=10, proc=4):
-    # %cd /content/Rerender_A_Video
-    ebsynth_dest = '/content/Rerender_A_Video/deps/ebsynth/bin/'
+    ebsynth_dest = './deps/ebsynth/bin/'
     self.get_ebsynth(ebsynth_folder, ebsynth_dest)
     self.create_folder(ebsynth_temp)
-    #frames_origin
     keys = os.path.join(ebsynth_temp, "keys")
     video = os.path.join(ebsynth_temp, "video")
     destination = os.path.join(self.video_destination, output_name)
     self.create_folder(keys)
     self.create_folder(video)
-    # !cp $self.key_frames/* $keys
-    # !cp $self.original_frames/* $video
-    # !(cd $video && rename 's/(\d+).jpg/$1.png/' *.jpg)
-    # !(cd $keys && rename 's/(\d+)\.jpg/$1.png/' *.jpg)
-    # !(cd $video && cp "0120.png" "0121.png")
-    # !(cd $keys && cp "0091.png" "0121.png")
-    print(ebsynth_temp, end, destination, self.fps, proc)
-    # !python video_blend.py $ebsynth_temp --end $end --itv $interval --key keys --output $destination --fps $self.fps --n_proc $proc
+    run(f"{self.key_frames}/* {keys}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    run(f"{self.original_frames}/* {video}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    run(f"rename 's/(\d+).jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    run(f"rename 's/(\d+)\.jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    # print(ebsynth_temp, end, destination, self.fps, proc)
+    run(f"python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     #!cp $output_name $self.video_destination
 
