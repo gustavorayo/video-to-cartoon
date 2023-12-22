@@ -8,7 +8,7 @@ from image_converter import ImageConverter
 
 class KeyFramesGenerator:
   def __init__(self, frames_origin,
-               frames_destination, keword_only=True , limit=120, interval = 10, start=5, prompts=None, difussion_configs={}):
+               frames_destination, keword_only=True , limit=120, interval = 10, start=5, prompts=None, frame_extension="png", difussion_configs={}):
     self.frames_destination = frames_destination
     self.img_text_method = 'fast'
     self.difussion_configs = difussion_configs
@@ -23,6 +23,7 @@ class KeyFramesGenerator:
     self.grid = Grid((2,2))
     self.start = start
     self.prompts = prompts
+    self.frame_extension=frame_extension
     if (not self.keword_only) and prompts == None:
       print("Loading clip")
       self.clipInt = ClipInterrogator()
@@ -60,7 +61,7 @@ class KeyFramesGenerator:
     paths = []
     start = self.start
     for i in range(start, self.limit+1, self.interval):
-      file_name = f'{i:04d}.jpg'
+      file_name = f'{i:04d}.{self.frame_extension}'
       file_path = os.path.join(self.frames_origin, file_name)
       names.append(file_name)
       paths.append(file_path)
