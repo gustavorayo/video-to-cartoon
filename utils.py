@@ -50,7 +50,7 @@ class VideoParser:
             os.remove(os.path.join(self.frame_path, filename))
 
     @timing_decorator
-    def video_to_frames(self):
+    def video_to_frames(self, frame_extension="jpg"):
         output_directory = self.frame_path
         # Create the output directory if it doesn't exist
         if not os.path.exists(output_directory):
@@ -65,7 +65,7 @@ class VideoParser:
                 break
 
             frame_count += 1
-            frame_filename = f'{frame_count:04d}.jpg'
+            frame_filename = f'{frame_count:04d}.{frame_extension}'
             frame_path = os.path.join(output_directory, frame_filename)
             img = self.center_crop(frame, (self.img_size, self.img_size))
             cv2.imwrite(frame_path, img)

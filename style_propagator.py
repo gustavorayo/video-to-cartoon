@@ -3,7 +3,7 @@ from subprocess import PIPE, run
 from utils import timing_decorator
 class StylePropagator:
   def __init__(self, video_destination, key_frames, original_frames,
-               frames_destination, fps=30, patch_number=5):
+               frames_destination, fps=30, patch_number=5, frame_extension="png"):
     self.video_destination = video_destination
     self.frames_destination = frames_destination
     self.key_frames = key_frames
@@ -11,6 +11,7 @@ class StylePropagator:
     self.original_frames = original_frames
     self.create_folder(video_destination)
     self.fps = fps
+    self.frame_extensions=frame_extension
 
   def create_folder(self, path):
     if not os.path.exists(path):
@@ -18,15 +19,15 @@ class StylePropagator:
 
   def get_guide(self, o, d):
     source_path = self.original_frames
-    source_guide = source_path + f"/{o:04d}.jpg"
-    target_guide = source_path + f"/{d:04d}.jpg"
+    source_guide = source_path + f"/{o:04d}.{self.frame_extensions}"
+    target_guide = source_path + f"/{d:04d}.{self.frame_extensions}"
     guide = f"-guide {source_guide} {target_guide} -weight 4"
     return guide
 
   def set_style(self,s, o, d, inlcude_prev = False):
-      style = self.key_frames + f"/{s:04d}.jpg"
+      style = self.key_frames + f"/{s:04d}.{self.frame_extensions}"
       guide = self.get_guide(o,d)
-      output = os.path.join(self.frames_destination, f"{d:04d}.png")
+      output = os.path.join(self.frames_destination, f"{d:04d}.{self.frame_extensions}")
       command = f"{self.ebsynth_path} -style {style} {guide} -output {output}"
       print(command)
       result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
@@ -85,7 +86,7 @@ class StylePropagator:
 
   @timing_decorator
   def advanced_propagation(self,ebsynth_folder, output_name, ebsynth_temp, end=120, interval=10, proc=4):
-    ebsynth_dest = './deps/ebsynth/bin/'
+    ebsynth_dest = 'deps/Rerender_A_Video/deps/ebsynth/bin/'
     self.get_ebsynth(ebsynth_folder, ebsynth_dest)
     self.create_folder(ebsynth_temp)
     keys = os.path.join(ebsynth_temp, "keys")
@@ -95,8 +96,8 @@ class StylePropagator:
     self.create_folder(video)
     run(f"{self.key_frames}/* {keys}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     run(f"{self.original_frames}/* {video}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-    run(f"rename 's/(\d+).jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-    run(f"rename 's/(\d+)\.jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    # run(f"rename 's/(\d+).jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    # run(f"rename 's/(\d+)\.jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     # print(ebsynth_temp, end, destination, self.fps, proc)
     run(f"python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     #!cp $output_name $self.video_destination
