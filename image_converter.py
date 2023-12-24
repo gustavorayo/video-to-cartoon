@@ -40,10 +40,6 @@ class ImageConverter:
     self.pipeline = self.pipeline.to("cuda")
     self.pipeline.enable_model_cpu_offload()
 
-  # def set_detector(self, controlnet):
-  #   if controlnet.contrains("canny"):
-  #     self.detectors.add(canny = CannyDetector())
-
   def get_model(self, style):
       if style == "Van-Gogh":
         model = "dallinmackay/Van-Gogh-diffusion"
@@ -51,14 +47,8 @@ class ImageConverter:
       elif style == "ghibli":
         model = "nitrosocke/Ghibli-Diffusion"
         style_key_word ="ghibli style"
-      elif style == "shinkai":
-        model = "krystv/shinkaiart"
-        style_key_word="Makoto Shinkai"
       elif style == "ryo":
         model = "gustavorayo/ryo-takemasa-v1"
-        style_key_word="ryo takemasa style"
-      elif style == "ryo_0":
-        model = "gustavorayo/ryo-takemasa"
         style_key_word="ryo takemasa style"
       return model, style_key_word
 

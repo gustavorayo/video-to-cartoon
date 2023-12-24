@@ -1,6 +1,12 @@
 import os
+import sys
+# parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# rerender = os.path.join(parent_dir, 'deps/Rerender_A_Video')
+# sys.path.insert(0, rerender)
 from subprocess import PIPE, run
 from utils import timing_decorator
+# from video_blend import  main as blender
+# from argparse import Namespace
 class StylePropagator:
   def __init__(self, video_destination, key_frames, original_frames,
                frames_destination, fps=30, patch_number=5, frame_extension="png"):
@@ -99,6 +105,7 @@ class StylePropagator:
     # run(f"rename 's/(\d+).jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     # run(f"rename 's/(\d+)\.jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     # print(ebsynth_temp, end, destination, self.fps, proc)
-    run(f"python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    r = run(f"cd deps/Rerender_A_Video && python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+    print(r.stdout, r.stderr)
     #!cp $output_name $self.video_destination
 

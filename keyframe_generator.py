@@ -47,9 +47,7 @@ class KeyFramesGenerator:
   def set_detector(self):
     pipeline_type = self.pipeline_type
     if pipeline_type =="Controlnet_text2img" or pipeline_type =="Controlnet_img2img":
-      #self.canny = CannyDetector()
       self.hed = HEDdetector.from_pretrained("lllyasviel/Annotators")
-      #self.sam = SamDetector.from_pretrained("ybelkada/segment-anything", subfolder="checkpoints")
 
 
   def create_foler(self, path):
@@ -136,11 +134,6 @@ class KeyFramesGenerator:
 
     if self.pipeline_type == 'Controlnet_text2img':
       first_control = self.canny(rs_image)
-      # c_image =[]
-      # for s_file in samples:
-      #   print(s_file)
-      #   c_image.append(self.sam(Image.open(s_file)))
-      # second_control = self.grid.merge_images(c_image)
       cartoonized_image = self.ic.text_to_image(prompt,
                                                 control_images=[first_control],
                                                 controlnet_conditioning_scale = df["controlnet_conditioning_scale"],
@@ -149,12 +142,7 @@ class KeyFramesGenerator:
 
     if self.pipeline_type == 'Controlnet_img2img':
       size = rs_image.size[0]
-      #first_control = self.canny(rs_image, detect_resolution=size, image_resolution=size)
       first_control = self.hed(rs_image, detect_resolution=size, image_resolution=size)
-      # c_image =[]
-      # for s_file in samples:
-      #   c_image.append(self.sam(Image.open(s_file)))
-      # second_control = self.grid.merge_images(c_image)
       cartoonized_image = self.ic.controlled_img2img(prompt,rs_image,df["strength"],
                                                       control_images=[first_control],
                                                       num_inference_steps=df["num_inference_steps"],
@@ -162,9 +150,6 @@ class KeyFramesGenerator:
                                                       control_guidance_end=df["control_guidance_end"],
                                                       negative_prompt=df["negative_prompt"])
     return cartoonized_image
-
-    def get_controls():
-      return None
 
     def get_images_names():
       generated_files = [os.path.join(self.frames_destination, f)for f in os.listdir(self.frames_destination)]
