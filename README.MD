@@ -6,5 +6,10 @@
       Your browser does not support the video tag.
     </video>
   </td>
+<td>    <video controls autoplay loop>
+      <source src="https://www.youtube.com/watch?v=4fezP875xOQ" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</td>
 </tr>
 </table>
