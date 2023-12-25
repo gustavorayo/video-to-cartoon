@@ -10,13 +10,13 @@
         <tbody>
             <tr>
                 <td>Row 1, Col 1</td>
-                <td>https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1ff1ff9b-62ca-4297-bcc8-e9f50a3ddce8</td>
-                <td>[Row 1, Col 3](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4339ac1e-e531-4f6d-930f-3d9b2a5095e3)</td>
-                <td>  
-
-https://github.com/gustavorayo/video-to-cartoon/assets/1848141/0694b70d-34f8-4cb2-963b-4dfc024b2cc5
-
-  </td>
+                <td>
+![](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1ff1ff9b-62ca-4297-bcc8-e9f50a3ddce8)
+                </td>
+                <td>
+https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4339ac1e-e531-4f6d-930f-3d9b2a5095e3
+                </td>
+                <td>https://github.com/gustavorayo/video-to-cartoon/assets/1848141/0694b70d-34f8-4cb2-963b-4dfc024b2cc5</td>
             </tr>
             <tr>
                 <td>Row 2, Col 1</td>
