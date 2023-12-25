@@ -9,7 +9,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Row 1, Col 1</td>
+                <td>![01_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/073e3483-44e8-4150-8df3-72cba0e44444)</td>
                 <td>
 ![](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1ff1ff9b-62ca-4297-bcc8-e9f50a3ddce8)
                 </td>
@@ -83,6 +83,7 @@ https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4339ac1e-e531-4f6
                 <td>Row 12, Col 2</td>
                 <td>Row 12, Col 3</td>
                 <td>Row 12, Col 4</td>
+
             </tr>
             <tr>
                 <td>Row 13, Col 1</td>
