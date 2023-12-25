@@ -1,151 +1,24 @@
-<table>
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th></th>
-                <th>Column 3</th>
-                <th>Column 4</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-
-![](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/073e3483-44e8-4150-8df3-72cba0e44444)
-
-</td>
-                <td>
-
-https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1ff1ff9b-62ca-4297-bcc8-e9f50a3ddce8
-
-</td>
-                <td>
-https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4339ac1e-e531-4f6d-930f-3d9b2a5095e3
-                </td>
-                <td>
-
-https://github.com/gustavorayo/video-to-cartoon/assets/1848141/0694b70d-34f8-4cb2-963b-4dfc024b2cc5
-
-</td>
-            </tr>
-            <tr>
-                <td>
-
-https://github.com/gustavorayo/video-to-cartoon/assets/1848141/c86bc4be-e9d0-45b8-b49c-f42fb8cb01bd
+| Video | Ryo Takemas | Ghibli | Van Gogh |
+| --- | ----- | ---- | ---- |
+| |![01_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8407e3b2-562c-4559-aabc-2f79d7b76c46) |![01_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/301b0566-b869-459a-93bc-4ad74209dddf) | ![01_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/68ac0eac-c11a-4bcf-b6ee-cde22051f989) |
+| |![02_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/b854bdb5-9c5b-47fe-9bea-24dc222fc558) |![02_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8199020e-24d4-4803-8e91-e29d104c35b9) | ![02_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/bfe5b053-3726-40c7-930d-7fa747b0c726) |
+| |![03_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/acdc9674-e5c0-474d-b0ca-79e8da811217) |![03_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/93cd7863-67e2-4cf7-afb6-d0fcc1dcf570) | ![03_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/60e9e020-1c33-43de-b5ec-87c845b8b25a) |
+| |![04_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/9b25e414-f1b7-4d3f-b716-a77befa1a4ca) |![04_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4bdd3248-c946-4569-bcd6-207fc087ee97) | ![04_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/71d42a53-37e1-4258-b2d4-0979faf0beb4) |
+| |![05_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/adeb9742-606d-4db2-8a78-a72334fd17f6) |![05_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/7daf82bc-346e-4b1c-916b-7d0b211e79e4) | ![05_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8c51c453-f7c5-497d-be77-32e4b049322a) |
+| |![06_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/23ddc9f8-7bcd-4d8d-8136-73006b5e4dec) |![06_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/fb60e4d0-0637-4f53-b7e3-f7c7272964da) | ![06_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/f46d3bdd-2357-4c81-9b7b-deefce8449e9) |
+| |![07_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/bc5e0c47-d81b-4268-a2a3-c94ea20c4307) |![07_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/16bdc1f5-dd2e-486e-8ca7-b5cb14e32338) | ![07_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/b67c70e0-ac02-4903-b1cb-f70224017dcb) |
+| |![08_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/7e157ee9-9951-4458-9048-7ce8700b4cef) |![08_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/985a4916-eda3-4933-8261-5ad4331350a3) | ![08_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/06e53c02-fad9-4afb-8376-53e1a5b3fb08) |
+| |![09_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/fd92a58d-335f-442b-9080-4a3d69e46483) |![09_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/d56001c7-e438-41e6-8751-019211be1be7) | ![09_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/c96d0577-4619-4d3c-8f03-19b39fd76dca) |
+| |![10_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/fbfbb0bc-a49a-4081-96e8-74b56d358556) |![10_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/0acfbc4a-1be5-4adb-9a72-f069e966fc09) | ![10_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8ae047cc-3542-419e-b3a1-a8d210e046c9) |
+| |![11_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/533cfdf0-14ab-49cb-b227-f5c963354cd1) |![11_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/d2e4a9d5-56f1-4b9e-b45c-b173766b0d1d) | ![11_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8cd7ffa7-e443-4d0c-a4fd-e2fee7562424) |
+| |![12_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/2337c665-fe20-48c7-ac94-9e798b26103f) |![12_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/bee32426-dd40-47df-a5c9-a0d736388618) | ![12_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1bfe2a9a-545a-4d56-9c01-ceabffeb599d) |
+| |![13_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/225afb26-5197-4751-86c0-90ac0397ab46) |![13_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/788a6eae-230e-4f7e-bf5f-68831d2046f3) | ![13_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/57b36021-4a1d-4467-a9a2-ec297c2e3622) |
+| |![14_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/fd450115-d354-4e80-b807-a08fb9d22a11) |![14_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/3e63e5ed-5bb2-45fc-82b0-235939fdad68) | ![14_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/06340853-efb8-4d6b-9b30-da916f484ea0) |
+| |![15_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/935a2586-7f2d-4944-ab56-2a02507429a3) |![15_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/09886651-2911-487a-8955-6e6bf0c6949c) | ![15_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/5cce1188-7ce1-4e84-be3e-7f1c6852d111) |
+| |![16_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/3d878c33-1297-4c87-974e-ce1d611369d4) |![16_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/34135a97-6f6d-4b9a-86f2-ff0db0a701df) | ![16_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/3b5abe95-b27d-461b-9627-9ec27af46e29) |
+| |![17_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/ef25f994-d5b7-47a4-b6fe-6d9954c2d808) |![17_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/a5a5ea8f-3740-4a88-bcb3-270c3cce5b4a) | ![17_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/4b0483ef-c602-4a26-9212-c3e9a62cd33c) |
+| |![18_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/5b6939d1-8b12-4dbf-9aca-6b67cfa84224) |![18_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/2b6b9edb-6dd5-4da1-96e7-508f9792540d) | ![18_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/74dc354f-45a6-42b6-9b92-63af27fd98e6) |
+| |![19_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/5cefc0ff-29ae-4d59-9a24-a0b64aecbe64) |![19_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/5954b361-4cd6-43be-91b2-34f3797b4440) | ![19_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/a2f1ab5d-9013-4f16-9859-b7f9a14ba8ee) |
+| |![20_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/0509e6f5-de6d-4c6e-bb70-09b1b9f30775) |![20_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/86d89f2c-018e-4ec0-b82d-78d18e74fa11) | ![20_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/1870f2fd-373d-41d5-9b19-ccf135d8c2fb) |
 
 
- </td>
-                <td>Row 2, Col 2</td>
-                <td>Row 2, Col 3</td>
-                <td>Row 2, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 3, Col 1</td>
-                <td>Row 3, Col 2</td>
-                <td>Row 3, Col 3</td>
-                <td>Row 3, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 4, Col 1</td>
-                <td>Row 4, Col 2</td>
-                <td>Row 4, Col 3</td>
-                <td>Row 4, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 5, Col 1</td>
-                <td>Row 5, Col 2</td>
-                <td>Row 5, Col 3</td>
-                <td>Row 5, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 6, Col 1</td>
-                <td>Row 6, Col 2</td>
-                <td>Row 6, Col 3</td>
-                <td>Row 6, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 7, Col 1</td>
-                <td>Row 7, Col 2</td>
-                <td>Row 7, Col 3</td>
-                <td>Row 7, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 8, Col 1</td>
-                <td>Row 8, Col 2</td>
-                <td>Row 8, Col 3</td>
-                <td>Row 8, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 9, Col 1</td>
-                <td>Row 9, Col 2</td>
-                <td>Row 9, Col 3</td>
-                <td>Row 9, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 10, Col 1</td>
-                <td>Row 10, Col 2</td>
-                <td>Row 10, Col 3</td>
-                <td>Row 10, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 11, Col 1</td>
-                <td>Row 11, Col 2</td>
-                <td>Row 11, Col 3</td>
-                <td>Row 11, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 12, Col 1</td>
-                <td>Row 12, Col 2</td>
-                <td>Row 12, Col 3</td>
-                <td>Row 12, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 13, Col 1</td>
-                <td>Row 13, Col 2</td>
-                <td>Row 13, Col 3</td>
-                <td>Row 13, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 14, Col 1</td>
-                <td>Row 14, Col 2</td>
-                <td>Row 14, Col 3</td>
-                <td>Row 14, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 15, Col 1</td>
-                <td>Row 15, Col 2</td>
-                <td>Row 15, Col 3</td>
-                <td>Row 15, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 16, Col 1</td>
-                <td>Row 16, Col 2</td>
-                <td>Row 16, Col 3</td>
-                <td>Row 16, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 17, Col 1</td>
-                <td>Row 17, Col 2</td>
-                <td>Row 17, Col 3</td>
-                <td>Row 17, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 18, Col 1</td>
-                <td>Row 18, Col 2</td>
-                <td>Row 18, Col 3</td>
-                <td>Row 18, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 19, Col 1</td>
-                <td>Row 19, Col 2</td>
-                <td>Row 19, Col 3</td>
-                <td>Row 19, Col 4</td>
-            </tr>
-            <tr>
-                <td>Row 20, Col 1</td>
-                <td>Row 20, Col 2</td>
-                <td>Row 20, Col 3</td>
-                <td>Row 20, Col 4</td>
-            </tr>
-        </tbody>
-    </table>
