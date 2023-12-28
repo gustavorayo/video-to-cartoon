@@ -19,21 +19,21 @@ def timing_decorator(func):
 
 
 class VideoParser:
-    def __init__(self, video_origin, frames_destination, clean_folder=False):
+    def __init__(self, video_origin, frames_destination, frame_limit=120, clean_folder=False):
         self.video_path = video_origin
         self.frame_path = frames_destination
-        self.frame_limit = 120
+        self.frame_limit = frame_limit
         self.img_size = 512
         if clean_folder and os.path.exists(self.frame_path):
             self.clean_folder()
 
-        # Taken from https://medium.com/curious-manava/center-crop-and-scaling-in-opencv-using-python-279c1bb77c74
 
     def center_crop(self, img, dim):
         """Returns center cropped image
     Args:
     img: image to be center cropped
     dim: dimensions (width, height) to be cropped
+    Code taken from: https://medium.com/curious-manava/center-crop-and-scaling-in-opencv-using-python-279c1bb77c74
     """
         width, height = img.shape[1], img.shape[0]
 
