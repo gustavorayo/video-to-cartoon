@@ -4,8 +4,7 @@ from style_propagator import StylePropagator
 from keyframe_generator import KeyFramesGenerator
 from utils import VideoParser
 
-def main(style, video_name, video_length=91):
-    # style = args.style
+def main(source_video, style, output_video_name="test.mp4", video_length=91):
     configs = {
         "pipeline_type": "Controlnet_img2img",
         "style": style,
@@ -27,9 +26,7 @@ def main(style, video_name, video_length=91):
     interval = int((video_length - 1) / sections)
     processable_length = ((interval * sections) + 1)
 
-    video_file = f'01.mp4'
-    video_path = os.path.join("./dataset", video_file)
-    vp = VideoParser(video_path, frames, frame_limit=processable_length, clean_folder=True)
+    vp = VideoParser(source_video, frames, frame_limit=processable_length, clean_folder=True)
     vp.video_to_frames(frame_extension="png")
     os.makedirs(keyframes, exist_ok=True)
     kfgen = KeyFramesGenerator(frames, keyframes, keword_only=False, interval=interval, start=1,
@@ -38,9 +35,9 @@ def main(style, video_name, video_length=91):
     kfgen.generate_key_frames(grid=True)
     video_path = "tmp/video"
     st = StylePropagator(video_path, keyframes, frames, propagated_frames)
-    local_ebsynth_path = "bin/ebsynth"
+    local_ebsynth_path = "bin"
     ebsynth_temp = "tmp/"
-    st.advanced_propagation(local_ebsynth_path, video_name, ebsynth_temp, end=processable_length, interval=interval)
+    st.advanced_propagation(local_ebsynth_path, output_video_name, ebsynth_temp, end=processable_length, interval=interval)
 
 # if __name__ == '__main__':
 #     parser = argparse.ArgumentParser()
