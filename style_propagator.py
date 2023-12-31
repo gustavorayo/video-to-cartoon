@@ -73,7 +73,7 @@ class StylePropagator:
         command = f"cp {ebsynth_origin} {ebsynth_dest}"
         result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
         print(result.stdout)
-        result = run(f"!chmod +x {self.ebsynth_path}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+        result = run(f"chmod +x {self.ebsynth_path}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
         print(result.stdout)
 
   def generate_video(self, output_name):
@@ -102,10 +102,6 @@ class StylePropagator:
     self.create_folder(video)
     run(f"{self.key_frames}/* {keys}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     run(f"{self.original_frames}/* {video}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-    # run(f"rename 's/(\d+).jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-    # run(f"rename 's/(\d+)\.jpg/$1.png/' *.jpg", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-    # print(ebsynth_temp, end, destination, self.fps, proc)
     r = run(f"cd deps/Rerender_A_Video && python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
     print(r.stdout, r.stderr)
-    #!cp $output_name $self.video_destination
 
