@@ -3,15 +3,15 @@ from PIL import Image
 
 from clip_interrogator import Config, Interrogator
 class ClipInterrogator():
-  def get_prompts(self, interval, limit):
-    prompts = {}
-    prompts_list = []
-    for i in range(1, self.limit+1, self.clip_interval):
-      file_name = f"{i:04d}.jpg"
-      file_path = os.path.join(self.frames_origin, file_name)
-      prompts[file_name] =  self.image_to_prompt(Image.open(file_path), self.img_text_method)
-      prompts_list.append(prompts[file_name])
-    return prompts, prompts_list
+  # def get_prompts(self, interval, limit):
+  #   prompts = {}
+  #   prompts_list = []
+  #   for i in range(1, self.limit+1, self.clip_interval):
+  #     file_name = f"{i:04d}.jpg"
+  #     file_path = os.path.join(self.frames_origin, file_name)
+  #     prompts[file_name] =  self.image_to_prompt(Image.open(file_path), self.img_text_method)
+  #     prompts_list.append(prompts[file_name])
+  #   return prompts, prompts_list
 
   def load_interrogator(self):
     config = Config()

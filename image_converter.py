@@ -50,6 +50,8 @@ class ImageConverter:
       elif style == "ryo":
         model = "gustavorayo/ryo-takemasa-v1"
         style_key_word="ryo takemasa style"
+      else:
+        raise Exception(f"style {style} not suported")
       return model, style_key_word
 
   @timing_decorator
