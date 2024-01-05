@@ -32,7 +32,7 @@ class KeyFramesGenerator:
             self.clipInt.load_interrogator()
 
     def set_pipeline(self, difussion_configs):
-        self.ic = ImageConverter()
+        self.ic = ImageConverter(low_cpu_mem_usage=True)
         model_id, keyword = self.ic.get_model(difussion_configs["style"])
         print("model and style", model_id, keyword)
         self.keyword = keyword

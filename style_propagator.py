@@ -86,18 +86,18 @@ class StylePropagator:
         self.generate_video(output_name)
 
     @timing_decorator
-    def advanced_propagation(self, ebsynth_folder, output_name, ebsynth_temp, end=120, interval=10, proc=4):
+    def advanced_propagation(self, ebsynth_folder, output_name, video_root_folder, end=120, interval=10, proc=4):
         ebsynth_dest = 'deps/Rerender_A_Video/deps/ebsynth/bin/'
         self.get_ebsynth(ebsynth_folder, ebsynth_dest)
-        self.create_folder(ebsynth_temp)
-        keys = os.path.join(ebsynth_temp, "keys")
-        video = os.path.join(ebsynth_temp, "video")
+        self.create_folder(video_root_folder)
+        keys = os.path.join(video_root_folder, "keys")
+        video = os.path.join(video_root_folder, "video")
         destination = os.path.join(self.video_destination, output_name)
         self.create_folder(keys)
         self.create_folder(video)
         run(f"cp {self.key_frames}/* {keys}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
         run(f"cp {self.original_frames}/* {video}", stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
-        r = run(
-            f"cd deps/Rerender_A_Video && python video_blend.py {ebsynth_temp} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}",
-            stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+        command = f"cd deps/Rerender_A_Video && python video_blend.py {video_root_folder} --end {end} --itv {interval} --key keys --output {destination} --fps {self.fps} --n_proc {proc}"
+        print(command)
+        r = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
         print(r.stdout, r.stderr)
