@@ -3,9 +3,23 @@ import os
 from style_propagator import StylePropagator
 from keyframe_generator import KeyFramesGenerator
 from utils import VideoParser
+import cv2
 
+def count_frames(video_path):
+    # Open the video file
+    cap = cv2.VideoCapture(video_path)
+    if not cap.isOpened():
+        print("Error opening video file")
+        return -1
 
-def main(source_video, style, output_video_name="test.mp4", video_length=91):
+    # Get the total number of frames
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+
+    cap.release()
+
+    return total_frames
+
+def main(source_video, style, output_video_name="test.mp4", video_length=None):
     configs = {
         "pipeline_type": "Controlnet_img2img",
         "style": style,
@@ -17,6 +31,10 @@ def main(source_video, style, output_video_name="test.mp4", video_length=91):
         "control_guidance_end": [0.8],
         "num_inference_steps": 25
     }
+
+    if video_length is None:
+        video_length = count_frames(source_video)
+
     current_path = os.getcwd()
     frames = current_path + "/tmp/frames"
     keyframes = current_path + "/tmp/keyframes"
@@ -27,6 +45,7 @@ def main(source_video, style, output_video_name="test.mp4", video_length=91):
     sections = 3
     interval = int((video_length - 1) / sections)
     processable_length = ((interval * sections) + 1)
+    print("Number of frames:", processable_length)
 
     vp = VideoParser(source_video, frames, frame_limit=processable_length, clean_folder=True)
     vp.video_to_frames(frame_extension="png")
@@ -56,7 +75,7 @@ if __name__ == '__main__':
                         help='Path to output video')
     parser.add_argument('--frames',
                         type=int,
-                        default=91,
+                        default=None,
                         help='Number of frames to translate')
     args = parser.parse_args()
     main(args.input_video, args.style, args.output, args.frames)

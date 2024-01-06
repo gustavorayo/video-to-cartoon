@@ -1,7 +1,7 @@
 clip-interrogator==0.6.0
 controlnet-aux==0.0.7
 diffusers==0.25.0
-einops==0.3.0
+einops==0.7.0
 imageio==2.9.0
 imageio-ffmpeg==0.4.2
 numba==0.57.0
