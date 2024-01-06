@@ -1,4 +1,9 @@
 ## Run project
+Clone:
+``` git clone --recursive git@github.com:gustavorayo/video-to-cartoon.git ```
+
+```cd  video-to-cartoon```
+
 install dependencies
 
 ```pip install -r requirements.txt```
