@@ -31,11 +31,11 @@ def main(source_video, style, output_video_name="test.mp4", video_length=91):
     vp = VideoParser(source_video, frames, frame_limit=processable_length, clean_folder=True)
     vp.video_to_frames(frame_extension="png")
     os.makedirs(keyframes, exist_ok=True)
-    kfgen = KeyFramesGenerator(frames, keyframes, keword_only=True, interval=interval, start=1,
+    kfgen = KeyFramesGenerator(frames, keyframes, keword_only=False, interval=interval, start=1,
                                frame_extension="png",
                                difussion_configs=configs)
     kfgen.generate_key_frames(grid=True)
-    video_path = current_path + "./"  # output video folder
+    video_path = current_path # output video folder. Current folder.
     st = StylePropagator(video_path, keyframes, frames, propagated_frames)
     local_ebsynth_path = "bin"
     video_root_folder = current_path + "/tmp"  # temporal directory for intermediate files
