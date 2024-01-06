@@ -1,3 +1,16 @@
+## Run project
+install dependencies
+
+```pip install -r requirements.txt```
+
+```python install.py```
+
+Example
+
+```python vid2cartoon.py --input_video ./dataset/02.mp4 --style ghibli --frames 91 --output ./test.mp4```
+
+
+## Translation examples
 | Video                                                                                                       | Ryo Takemas | Ghibli | Van Gogh |
 |-------------------------------------------------------------------------------------------------------------| ----- | ---- | ---- |
 | ![01](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/acbcd8a9-ebf3-4be1-8e33-766dc355e529)  |![01_ryo](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/8407e3b2-562c-4559-aabc-2f79d7b76c46) |![01_ghibli](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/301b0566-b869-459a-93bc-4ad74209dddf) | ![01_van_gogh](https://github.com/gustavorayo/video-to-cartoon/assets/1848141/68ac0eac-c11a-4bcf-b6ee-cde22051f989) |
