@@ -151,7 +151,3 @@ class KeyFramesGenerator:
                                                            control_guidance_end=df["control_guidance_end"],
                                                            negative_prompt=df["negative_prompt"])
         return cartoonized_image
-
-        # def get_images_names():
-        #   generated_files = [os.path.join(self.frames_destination, f)for f in os.listdir(self.frames_destination)]
-        #   return generated_files

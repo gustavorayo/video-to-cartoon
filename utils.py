@@ -27,7 +27,6 @@ class VideoParser:
         if clean_folder and os.path.exists(self.frame_path):
             self.clean_folder()
 
-
     def center_crop(self, img, dim):
         """Returns center cropped image
     Args:

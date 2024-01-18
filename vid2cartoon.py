@@ -5,6 +5,7 @@ from keyframe_generator import KeyFramesGenerator
 from utils import VideoParser
 import cv2
 
+
 def count_frames(video_path):
     # Open the video file
     cap = cv2.VideoCapture(video_path)
@@ -18,6 +19,7 @@ def count_frames(video_path):
     cap.release()
 
     return total_frames
+
 
 def main(source_video, style, output_video_name="test.mp4", video_length=None):
     configs = {
@@ -54,7 +56,7 @@ def main(source_video, style, output_video_name="test.mp4", video_length=None):
                                frame_extension="png",
                                difussion_configs=configs)
     kfgen.generate_key_frames(grid=True)
-    video_path = current_path # output video folder. Current folder.
+    video_path = current_path  # output video folder. Current folder.
     st = StylePropagator(video_path, keyframes, frames, propagated_frames)
     local_ebsynth_path = "bin"
     video_root_folder = current_path + "/tmp"  # temporal directory for intermediate files
