@@ -52,7 +52,7 @@ def main(source_video, style, output_video_name="test.mp4", video_length=None):
     vp = VideoParser(source_video, frames, frame_limit=processable_length, clean_folder=True)
     vp.video_to_frames(frame_extension="png")
     os.makedirs(keyframes, exist_ok=True)
-    kfgen = KeyFramesGenerator(frames, keyframes, keword_only=False, interval=interval, start=1,
+    kfgen = KeyFramesGenerator(frames, keyframes, keword_only=False, limit=processable_length, interval=interval, start=1,
                                frame_extension="png",
                                difussion_configs=configs)
     kfgen.generate_key_frames(grid=True)
